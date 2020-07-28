@@ -1,0 +1,30 @@
+For start:
+Tools->Start Zenno test task service
+
+For test:
+authorization: Basic Hi/Zenno
+port: 9889
+
+
+[GET]/ProjectsNames
+
+[POST]/AddFile
+{
+	"templateName": "Class",
+	"language": "CSharp",
+	"name": "test.cs",
+	"toProjectShortName" : "ConsoleApp16"
+}
+
+[POST]/WriteTextByPosition
+{
+	"text": "fsdgfdgdfg",
+	"position": 11
+}
+
+[POST]/AddNugetPackage
+{
+	"name": "Newtonsoft.Json",
+	"url": "fsdgfdgdfg",
+	"toProjectShortName": "ConsoleApp16"
+}
