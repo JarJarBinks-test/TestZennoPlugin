@@ -218,7 +218,7 @@ namespace TestZennoPlugin
 
             if (!String.IsNullOrWhiteSpace(name))
                 command = String.Format(commandTemplate, name, toProjectShortName);            
-            else if (!String.IsNullOrWhiteSpace(name))
+            else if (!String.IsNullOrWhiteSpace(url))
                 command = String.Format(commandTemplate, url, toProjectShortName);
 
             await Log($"Install package command: '{command}'.");
@@ -302,37 +302,6 @@ namespace TestZennoPlugin
 
             return result;
         }
-
-        /*
-         try
-            {
-                var project = dte.Solution.Projects. //.OfType<EnvDTE.Project>().ToList();
-
-                foreach (EnvDTE.ProjectItem projectItem in project.ProjectItems)
-                {
-                    if (projectItem.Name.EndsWith(".cs"))
-                    {
-                        OpenProjectItemInView(projectItem, guid_microsoft_csharp_editor_with_encoding,
-                           Microsoft.VisualStudio.VSConstants.LOGVIEWID.Code_guid);
-                    }
-                    else if (projectItem.Name.EndsWith(".vb"))
-                    {
-                        OpenProjectItemInView(projectItem, guid_microsoft_visual_basic_editor_with_encoding,
-                           Microsoft.VisualStudio.VSConstants.LOGVIEWID.Code_guid);
-                    }
-                    else if (projectItem.Name.EndsWith(".txt"))
-                    {
-                        OpenProjectItemInView(projectItem, guid_source_code_text_editor,
-                           Microsoft.VisualStudio.VSConstants.LOGVIEWID.TextView_guid);
-                    }
-
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.ToString());
-            }
-         */
 
         #endregion
 
